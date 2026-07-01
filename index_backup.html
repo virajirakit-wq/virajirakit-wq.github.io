@@ -177,9 +177,6 @@
     display:grid; grid-template-columns:1fr auto; gap:48px; align-items:center;
     overflow:hidden;
   }
-  .platform-card > .platform-content{
-    min-width:0;
-  }
   .platform-card::before{
     content:"";
     position:absolute; right:-10%; top:50%; transform:translateY(-50%);
@@ -190,8 +187,7 @@
   .platform-kicker{ font-size:12px; letter-spacing:.36em; text-transform:uppercase; color:var(--stone); margin-bottom:18px; }
   .platform-name{
     font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:500;
-    font-size:clamp(26px,4vw,48px); color:var(--cream); margin-bottom:18px; line-height:1.15;
-    overflow-wrap:anywhere; word-break:break-word;
+    font-size:clamp(30px,4vw,48px); color:var(--cream); margin-bottom:18px; line-height:1.1;
   }
   .platform-name span{ color:var(--rose); }
   .platform-card p{ font-size:16px; line-height:1.85; color:#d6d1d4; max-width:48ch; }
@@ -268,12 +264,6 @@
     footer .flinks a{ margin-left:0; margin-right:20px; }
   }
 
-  @media (max-width: 480px){
-    .platform-card{ padding:28px; }
-    .platform-name{ font-size:24px; }
-    .url-pill{ width:100%; justify-content:center; text-align:center; white-space:normal; word-break:break-word; padding:14px 16px; }
-  }
-
   @media (prefers-reduced-motion: reduce){
     *{ animation:none !important; transition:none !important; scroll-behavior:auto !important; }
   }
@@ -341,7 +331,7 @@
   <!-- PLATFORM -->
   <section id="platform" class="platform">
     <div class="platform-card">
-      <div class="platform-content">
+      <div>
         <div class="platform-kicker">Our Flagship Platform</div>
         <div class="platform-name">Nursing<span>Homes</span>Thailand.com</div>
         <p>Thailand's first dedicated nursing home placement platform. We help families find the right nursing home tailored to each individual's needs, with clarity, care, and confidence.</p>
